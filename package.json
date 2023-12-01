@@ -11,7 +11,7 @@
     "test:load-envs": "dotenv -e .env.test",
     "test": "npm run test:load-envs prisma migrate deploy & dotenv -e .env.test jest -- --passWithNoTests -i --coverage",
     "test:coverage": "npm run test -- --coverage",
-    "test:migration:run": "npm run test:load-envs prisma migrate dev",
+    "test:migration:run": "npm run test:load-envs prisma migrate deploy",
     "dev:migration:run": "npx prisma migrate dev",
     "lint": "eslint .",
     "prepare": "husky install"
