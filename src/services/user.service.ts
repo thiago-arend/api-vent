@@ -15,6 +15,11 @@ export async function create(userInput: UserInput) {
   return userRepository.create(formattedInput);
 }
 
+export async function getAll() {
+  return userRepository.getAll();
+}
+
 export const userService = {
   create,
+  getAll,
 };

@@ -10,6 +10,8 @@ const errors = {
   ['EmailAlreadyExistsError']: httpStatus.CONFLICT,
   ['InvalidInputDataError']: httpStatus.UNPROCESSABLE_ENTITY,
   ['InvalidUserOrPasswordError']: httpStatus.FORBIDDEN,
+  ['TokenHasExpiredError']: httpStatus.FORBIDDEN,
+  ['TokenIsInvalidError']: httpStatus.FORBIDDEN,
 };
 
 export default function handleApplicationErrors(

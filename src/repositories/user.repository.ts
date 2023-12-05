@@ -13,7 +13,12 @@ async function getByEmail(email: string) {
   });
 }
 
+async function getAll() {
+  return prisma.user.findMany();
+}
+
 export const userRepository = {
   create,
   getByEmail,
+  getAll,
 };

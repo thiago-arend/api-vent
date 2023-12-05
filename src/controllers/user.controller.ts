@@ -10,6 +10,13 @@ export async function create(req: Request, res: Response) {
   res.status(httpStatus.CREATED).send(response);
 }
 
+export async function getAll(req: Request, res: Response) {
+  const response = await userService.getAll();
+
+  res.status(httpStatus.OK).send(response);
+}
+
 export const userController = {
   create,
+  getAll,
 };
