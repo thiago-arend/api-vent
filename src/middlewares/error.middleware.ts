@@ -9,6 +9,7 @@ export type ApplicationError = {
 const errors = {
   ['EmailAlreadyExistsError']: httpStatus.CONFLICT,
   ['InvalidInputDataError']: httpStatus.UNPROCESSABLE_ENTITY,
+  ['InvalidUserOrPasswordError']: httpStatus.FORBIDDEN,
 };
 
 export default function handleApplicationErrors(
